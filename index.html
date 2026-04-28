@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школа - Онлайн школа програмування</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">🚀 Школа</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Головна</a></li>
+                    <li><a href="pages/courses.html" class="nav-link">Курси</a></li>
+                    <li><a href="pages/about.html" class="nav-link">Про нас</a></li>
+                </ul>
+                <button class="btn btn-primary" onclick="openModal()">Записатися</button>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Навчися програмувати <span class="highlight">з нуля до профі</span></h1>
+                <p class="hero-subtitle">Онлайн-курси з програмування для початківців та досвідчених. Практичні завдання, менторська підтримка та сертифікати.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="location.href='pages/courses.html'">Обрати курс</button>
+                    <button class="btn btn-outline btn-lg" onclick="openModal()">Безкоштовний урок</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>
