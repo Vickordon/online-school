@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -22,6 +23,8 @@
             </nav>
         </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -31,9 +34,239 @@
                     <button class="btn btn-primary btn-lg" onclick="location.href='pages/courses.html'">Обрати курс</button>
                     <button class="btn btn-outline btn-lg" onclick="openModal()">Безкоштовний урок</button>
                 </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Студентів</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Курсів</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Працевлаштування</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Чому обирають нас</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Практичний підхід</h3>
+                    <p>80% часу - практика. Створюйте реальні проекти з першого дня.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Досвідчені ментори</h3>
+                    <p>Навчання у практиків з провідних IT-компаній.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Гнучкий графік</h3>
+                    <p>Навчайтесь у зручний час. Доступ 24/7 до всіх матеріалів.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Допомога з працевлаштуванням</h3>
+                    <p>Підготовка резюме, співбесіди та доступ до бази вакансій.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📜</div>
+                    <h3>Сертифікати</h3>
+                    <p>Офіційні сертифікати після завершення кожного курсу.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Підтримка 24/7</h3>
+                    <p>Допомога менторів та спільнота студентів.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Preview -->
+    <section class="courses-preview">
+        <div class="container">
+            <h2 class="section-title">Популярні курси</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-badge">Популярний</div>
+                    <div class="course-image frontend">
+                        <div class="course-icon">🌐</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Frontend Розробка</h3>
+                        <p>HTML, CSS, JavaScript, React. Створюйте сучасні веб-додатки.</p>
+                        <div class="course-meta">
+                            <span>📚 12 модулів</span>
+                            <span>⏱️ 6 місяців</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="price">2999 ₴/міс</span>
+                            <button class="btn btn-sm btn-primary" onclick="location.href='pages/courses.html'">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image backend">
+                        <div class="course-icon">⚙️</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Backend Розробка</h3>
+                        <p>Node.js, Python, бази даних. Розробка серверної частини.</p>
+                        <div class="course-meta">
+                            <span>📚 10 модулів</span>
+                            <span>⏱️ 5 місяців</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="price">2799 ₴/міс</span>
+                            <button class="btn btn-sm btn-primary" onclick="location.href='pages/courses.html'">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-badge">Новинка</div>
+                    <div class="course-image mobile">
+                        <div class="course-icon">📱</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Мобільна Розробка</h3>
+                        <p>React Native, Flutter. Додатки для iOS та Android.</p>
+                        <div class="course-meta">
+                            <span>📚 14 модулів</span>
+                            <span>⏱️ 7 місяців</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="price">3199 ₴/міс</span>
+                            <button class="btn btn-sm btn-primary" onclick="location.href='pages/courses.html'">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg" onclick="location.href='pages/courses.html'">Переглянути всі курси</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Відгуки студентів</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👨‍💻</div>
+                    <div class="testimonial-content">
+                        <p>"Завдяки школі я зміг кардинально змінити професію. Через 6 місяців навчання отримав першу роботу як Frontend розробник!"</p>
+                        <div class="testimonial-author">
+                            <strong>Олександр К.</strong>
+                            <span>Frontend Developer, EPAM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👩‍💻</div>
+                    <div class="testimonial-content">
+                        <p>"Навчання дуже структуроване, ментори завжди на зв'язку. Особливо сподобались практичні проекти."</p>
+                        <div class="testimonial-author">
+                            <strong>Марія П.</strong>
+                            <span>Fullstack Developer, SoftServe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">🧑‍💻</div>
+                    <div class="testimonial-content">
+                        <p>"Почав з повного нуля. Зараз працюю в міжнародній компанії. Школа дала мені знання та впевненість."</p>
+                        <div class="testimonial-author">
+                            <strong>Андрій М.</strong>
+                            <span>Backend Developer, GlobalLogic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готові розпочати свій шлях у IT?</h2>
+                <p>Запишіться на безкоштовний пробний урок вже сьогодні!</p>
+                <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на урок</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🚀 Школа</h4>
+                    <p>Онлайн-школа програмування для тих, хто хоче змінити своє життя.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Курси</h4>
+                    <ul>
+                        <li><a href="pages/courses.html">Frontend</a></li>
+                        <li><a href="pages/courses.html">Backend</a></li>
+                        <li><a href="pages/courses.html">Mobile</a></li>
+                        <li><a href="pages/courses.html">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Компанія</h4>
+                    <ul>
+                        <li><a href="pages/about.html">Про нас</a></li>
+                        <li><a href="#">Контакти</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <ul>
+                        <li>📧 info@shkola.com</li>
+                        <li>📱 +380 99 123 4567</li>
+                        <li>💬 Telegram: @shkola</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Школа. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Записатися на курс</h2>
+            <form id="signupForm" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон" required>
+                <select required>
+                    <option value="">Оберіть курс</option>
+                    <option value="frontend">Frontend Розробка</option>
+                    <option value="backend">Backend Розробка</option>
+                    <option value="mobile">Мобільна Розробка</option>
+                    <option value="python">Python Розробка</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-block">Відправити заявку</button>
+            </form>
+        </div>
+    </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
