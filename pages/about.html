@@ -7,6 +7,217 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, #4F46E5 0%, #7c3aed 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .about-image .emoji {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-section {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4F46E5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+        
+        .mission-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .mission-card {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .mission-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .mission-card p {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-avatar {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: #4F46E5;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .team-bio {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #4F46E5 0%, #7c3aed 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -23,15 +234,222 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Про <span class="highlight">нашу школу</span></h1>
-                <p class="hero-subtitle">Ми створюємо майбутнє IT-освіти в Україні. Наша місія - зробити якісну освіту з програмування доступною для кожного.</p>
+            <h1 class="page-title">Про нашу школу</h1>
+            <p class="page-subtitle">Ми створюємо майбутнє IT-освіти в Україні. Наша місія - зробити якісну освіту з програмування доступною для кожного.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Наша історія</h2>
+                    <p>Школа була заснована у 2020 році групою IT-фахівців, які побачили потребу в якісній онлайн-освіті з програмування в Україні.</p>
+                    <p>Ми віримо, що кожен може навчитися програмувати, незалежно від віку, освіти чи попереднього досвіду. Головне - бажання вчитися та правильний підхід.</p>
+                    <p>За 4 роки роботи ми випустили понад 5000 студентів, 95% з яких працевлаштувалися в IT-компанії. Наші випускники працюють в EPAM, SoftServe, GlobalLogic, Luxoft та інших провідних компаніях.</p>
+                </div>
+                <div class="about-image">
+                    <div class="emoji">🎓</div>
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">З 2020 року</h3>
+                    <p style="opacity: 0.9;">Навчаємо майбутніх розробників</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Випускників</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Курсів</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="95">0</span>
+                    <span class="stat-label">% Працевлаштування</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="20">0</span>
+                    <span class="stat-label">Менторів</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Наші цінності</h2>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="mission-icon">🎯</div>
+                    <h3>Якість освіти</h3>
+                    <p>Ми постійно оновлюємо програми курсів, щоб вони відповідали актуальним вимогам ринку праці.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🤝</div>
+                    <h3>Підтримка</h3>
+                    <p>Кожен студент отримує персонального ментора, який допомагає на всьому шляху навчання.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🚀</div>
+                    <h3>Практичність</h3>
+                    <p>80% навчального часу - це практика. Студенти створюють реальні проекти для портфоліо.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">💼</div>
+                    <h3>Працевлаштування</h3>
+                    <p>Ми допомагаємо випускникам знайти першу роботу в IT-компаніях наших партнерів.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🌍</div>
+                    <h3>Доступність</h3>
+                    <p>Онлайн-формат дозволяє навчатися з будь-якої точки світу у зручний час.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">📈</div>
+                    <h3>Розвиток</h3>
+                    <p>Ми постійно вдосконалюємо наші курси та впроваджуємо нові технології навчання.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💼</div>
+                    <div class="team-name">Олександр Коваленко</div>
+                    <div class="team-role">CEO & Засновник</div>
+                    <div class="team-bio">15 років досвіду в IT. Колишній Tech Lead в EPAM.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💻</div>
+                    <div class="team-name">Марія Шевченко</div>
+                    <div class="team-role">CTO</div>
+                    <div class="team-bio">Senior Developer з 10-річним досвідом.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <div class="team-name">Андрій Бондар</div>
+                    <div class="team-role">Head of Education</div>
+                    <div class="team-bio">8 років досвіду викладання програмування.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💼</div>
+                    <div class="team-name">Олена Мельник</div>
+                    <div class="team-role">HR Director</div>
+                    <div class="team-bio">Партнерства з 50+ IT-компаніями.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Готові приєднатися до нашої спільноти?</h2>
+            <p>Запишіться на безкоштовний пробний урок вже сьогодні!</p>
+            <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на урок</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🚀 Школа</h4>
+                    <p>Онлайн-школа програмування для тих, хто хоче змінити своє життя.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Курси</h4>
+                    <ul>
+                        <li><a href="courses.html">Frontend</a></li>
+                        <li><a href="courses.html">Backend</a></li>
+                        <li><a href="courses.html">Mobile</a></li>
+                        <li><a href="courses.html">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Компанія</h4>
+                    <ul>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="#">Контакти</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <ul>
+                        <li>📧 info@shkola.com</li>
+                        <li>📱 +380 99 123 4567</li>
+                        <li>💬 Telegram: @shkola</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Школа. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Записатися на курс</h2>
+            <form id="signupForm" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон" required>
+                <select required>
+                    <option value="">Оберіть курс</option>
+                    <option value="frontend">Frontend Розробка</option>
+                    <option value="backend">Backend Розробка</option>
+                    <option value="mobile">Мобільна Розробка</option>
+                    <option value="python">Python Розробка</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-block">Відправити заявку</button>
+            </form>
+        </div>
+    </div>
+
     <script src="../js/app.js"></script>
+    <script>
+        // Animate stats on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.dataset.target);
+                        const suffix = stat.textContent.replace(/[0-9]/g, '');
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                stat.textContent = target.toLocaleString() + suffix;
+                                clearInterval(timer);
+                            } else {
+                                stat.textContent = Math.floor(current).toLocaleString() + suffix;
+                            }
+                        }, 40);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
 </body>
 </html>
