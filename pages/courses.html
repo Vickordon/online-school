@@ -7,6 +7,218 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .filter-section {
+            padding: 2rem 0;
+            background: #fff;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #4F46E5;
+            background: #4F46E5;
+            color: white;
+        }
+        
+        .courses-section {
+            padding: 60px 0 100px;
+        }
+        
+        .course-detail-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .course-detail-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+        
+        .course-detail-image.frontend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .course-detail-image.backend {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .course-detail-image.mobile {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .course-detail-image.python {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        
+        .course-detail-content {
+            padding: 2rem;
+        }
+        
+        .course-detail-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .course-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #6b7280;
+        }
+        
+        .course-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .course-program h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+        
+        .module {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #4F46E5;
+        }
+        
+        .module-number {
+            color: #4F46E5;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        
+        .module-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        
+        .enroll-section {
+            background: linear-gradient(135deg, #4F46E5 0%, #7c3aed 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .price-large {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #4F46E5;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -23,15 +235,319 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Наші <span class="highlight">курси</span></h1>
-                <p class="hero-subtitle">Оберіть напрямок, який допоможе вам стати професійним розробником</p>
+            <h1 class="page-title">Наші курси</h1>
+            <p class="page-subtitle">Оберіть напрямок, який допоможе вам стати професійним розробником</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCourses('all')">Всі курси</button>
+                <button class="filter-btn" onclick="filterCourses('frontend')">Frontend</button>
+                <button class="filter-btn" onclick="filterCourses('backend')">Backend</button>
+                <button class="filter-btn" onclick="filterCourses('mobile')">Mobile</button>
+                <button class="filter-btn" onclick="filterCourses('python')">Python</button>
             </div>
         </div>
     </section>
 
+    <section class="courses-section">
+        <div class="container">
+            <!-- Frontend Course -->
+            <div class="course-detail-card" data-category="frontend">
+                <div class="course-detail-image frontend">🌐</div>
+                <div class="course-detail-content">
+                    <h3>Frontend Розробка</h3>
+                    <div class="course-meta">
+                        <span>📚 12 модулів</span>
+                        <span>⏱️ 6 місяців</span>
+                        <span>👥 Групи до 15 осіб</span>
+                    </div>
+                    <p class="course-description">Навчіться створювати сучасні веб-сайти та додатки з використанням HTML, CSS, JavaScript та React. Ви створите портфоліо з реальних проектів.</p>
+                    
+                    <div class="course-program">
+                        <h4>Програма курсу</h4>
+                        <div class="module">
+                            <div class="module-number">Модуль 1</div>
+                            <div class="module-title">Основи HTML & CSS</div>
+                            <div class="module-description">Структура веб-сторінок, семантична верстка, Flexbox та Grid</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 2</div>
+                            <div class="module-title">JavaScript основи</div>
+                            <div class="module-description">Змінні, функції, об'єкти, масиви, робота з DOM</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 3</div>
+                            <div class="module-title">Сучасний JavaScript</div>
+                            <div class="module-description">ES6+, асинхронність, Promise, async/await</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 4</div>
+                            <div class="module-title">React фундамент</div>
+                            <div class="module-description">Компоненти, JSX, props, state, хуки</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 5</div>
+                            <div class="module-title">React просунутий</div>
+                            <div class="module-description">Redux, React Router, оптимізація</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 6</div>
+                            <div class="module-title">Дипломний проект</div>
+                            <div class="module-description">Створення повноцінного веб-додатку для портфоліо</div>
+                        </div>
+                    </div>
+                    
+                    <div class="enroll-section">
+                        <div class="price-large">2999 ₴</div>
+                        <div class="price-period">за місяць</div>
+                        <p style="margin-top: 1rem; opacity: 0.9;">Перші 2 тижні - безкоштовно!</p>
+                        <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на курс</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Course -->
+            <div class="course-detail-card" data-category="backend">
+                <div class="course-detail-image backend">⚙️</div>
+                <div class="course-detail-content">
+                    <h3>Backend Розробка</h3>
+                    <div class="course-meta">
+                        <span>📚 10 модулів</span>
+                        <span>⏱️ 5 місяців</span>
+                        <span>👥 Групи до 15 осіб</span>
+                    </div>
+                    <p class="course-description">Опануйте серверну розробку, бази даних та створення API з Node.js та Python.</p>
+                    
+                    <div class="course-program">
+                        <h4>Програма курсу</h4>
+                        <div class="module">
+                            <div class="module-number">Модуль 1</div>
+                            <div class="module-title">Основи Node.js</div>
+                            <div class="module-description">Введення в серверний JavaScript, модулі, npm</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 2</div>
+                            <div class="module-title">Express.js</div>
+                            <div class="module-description">Створення веб-серверів, роутинг, middleware</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 3</div>
+                            <div class="module-title">Бази даних</div>
+                            <div class="module-description">MongoDB, PostgreSQL, ORM</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 4</div>
+                            <div class="module-title">REST API</div>
+                            <div class="module-description">Проектування API, CRUD операції</div>
+                        </div>
+                        <div class="module">
+                            <div class="module-number">Модуль 5</div>
+                            <div class="module-title">Безпека та деплой</div>
+                            <div class="module-description">JWT, OAuth, Docker, CI/CD</div>
+                        </div>
+                    </div>
+                    
+                    <div class="enroll-section">
+                        <div class="price-large">2799 ₴</div>
+                        <div class="price-period">за місяць</div>
+                        <p style="margin-top: 1rem; opacity: 0.9;">Перші 2 тижні - безкоштовно!</p>
+                        <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на курс</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Course -->
+            <div class="course-detail-card" data-category="mobile">
+                <div class="course-detail-image mobile">📱</div>
+                <div class="course-detail-content">
+                    <h3>Мобільна Розробка</h3>
+                    <div class="course-meta">
+                        <span>📚 14 модулів</span>
+                        <span>⏱️ 7 місяців</span>
+                        <span>👥 Групи до 12 осіб</span>
+                    </div>
+                    <p class="course-description">Створюйте крос-платформні мобільні додатки для iOS та Android з React Native.</p>
+                    
+                    <div class="enroll-section">
+                        <div class="price-large">3199 ₴</div>
+                        <div class="price-period">за місяць</div>
+                        <p style="margin-top: 1rem; opacity: 0.9;">Перші 2 тижні - безкоштовно!</p>
+                        <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на курс</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Course -->
+            <div class="course-detail-card" data-category="python">
+                <div class="course-detail-image python">🐍</div>
+                <div class="course-detail-content">
+                    <h3>Python Розробка</h3>
+                    <div class="course-meta">
+                        <span>📚 11 модулів</span>
+                        <span>⏱️ 6 місяців</span>
+                        <span>👥 Групи до 15 осіб</span>
+                    </div>
+                    <p class="course-description">Вивчіть Python з нуля до створення веб-додатків, ботів та аналізу даних.</p>
+                    
+                    <div class="enroll-section">
+                        <div class="price-large">2699 ₴</div>
+                        <div class="price-period">за місяць</div>
+                        <p style="margin-top: 1rem; opacity: 0.9;">Перші 2 тижні - безкоштовно!</p>
+                        <button class="btn btn-white btn-lg" onclick="openModal()">Записатися на курс</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Часті запитання</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Чи потрібні попередні знання програмування?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ні, наші курси розраховані на початківців. Ми починаємо з основ і поступово переходимо до складніших тем.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Скільки часу потрібно виділяти на навчання?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Рекомендуємо виділяти 10-15 годин на тиждень: 2-3 онлайн-заняття та самостійна робота.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Чи є розстрочка оплати?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Так, ми пропонуємо розстрочку на 3, 6 або 12 місяців без відсотків.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Чи допомагаєте ви з працевлаштуванням?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Так! 95% наших випускників працевлаштовуються протягом 3 місяців після завершення курсу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🚀 Школа</h4>
+                    <p>Онлайн-школа програмування для тих, хто хоче змінити своє життя.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Курси</h4>
+                    <ul>
+                        <li><a href="#">Frontend</a></li>
+                        <li><a href="#">Backend</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Компанія</h4>
+                    <ul>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="#">Контакти</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <ul>
+                        <li>📧 info@shkola.com</li>
+                        <li>📱 +380 99 123 4567</li>
+                        <li>💬 Telegram: @shkola</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Школа. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Записатися на курс</h2>
+            <form id="signupForm" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон" required>
+                <select required>
+                    <option value="">Оберіть курс</option>
+                    <option value="frontend">Frontend Розробка</option>
+                    <option value="backend">Backend Розробка</option>
+                    <option value="mobile">Мобільна Розробка</option>
+                    <option value="python">Python Розробка</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-block">Відправити заявку</button>
+            </form>
+        </div>
+    </div>
+
     <script src="../js/app.js"></script>
+    <script>
+        function filterCourses(category) {
+            const courses = document.querySelectorAll('.course-detail-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            courses.forEach(course => {
+                if (category === 'all' || course.dataset.category === category) {
+                    course.style.display = 'block';
+                    setTimeout(() => {
+                        course.style.opacity = '1';
+                        course.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    course.style.opacity = '0';
+                    course.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        course.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                icon.textContent = '+';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.textContent = '−';
+            }
+        }
+    </script>
 </body>
 </html>
